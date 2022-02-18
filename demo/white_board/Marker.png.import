@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/Marker.png-028a33afa69a28e517eeaf2f473a9a45.image"
+
+[deps]
+
+source_file="res://demo/white_board/Marker.png"
+dest_files=[ "res://.import/Marker.png-028a33afa69a28e517eeaf2f473a9a45.image" ]
+
+[params]
+
