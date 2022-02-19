@@ -31,34 +31,34 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 5, 0 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
 
 [node name="Table" parent="." instance=ExtResource( 3 )]
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 5, 0 )
-
-[node name="MarkerRed" parent="." instance=ExtResource( 4 )]
+[node name="MarkerRed" parent="Table" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
-[node name="MarkerGreen" parent="." instance=ExtResource( 4 )]
+[node name="MarkerGreen" parent="Table" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 1, 0 )
 tip_color = Color( 0, 1, 0, 1 )
 
-[node name="MarkerBlue" parent="." instance=ExtResource( 4 )]
+[node name="MarkerBlue" parent="Table" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1, 0 )
 tip_color = Color( 0, 0, 1, 1 )
 
-[node name="MarkerYellow" parent="." instance=ExtResource( 4 )]
+[node name="MarkerYellow" parent="Table" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1.1, 0 )
 tip_color = Color( 1, 1, 0, 1 )
 
-[node name="MarkerBlack" parent="." instance=ExtResource( 4 )]
+[node name="MarkerBlack" parent="Table" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 1.1, 0 )
 tip_color = Color( 0, 0, 0, 1 )
 
-[node name="Eraser" parent="." instance=ExtResource( 5 )]
+[node name="Eraser" parent="Table" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0 )
 
 [node name="WhiteBoardStand" parent="." instance=ExtResource( 6 )]
