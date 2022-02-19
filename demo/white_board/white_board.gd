@@ -32,12 +32,12 @@ func _ready():
 
 # Mark an area of the white-board
 func mark(var from: Vector2, var to: Vector2, var color: Color, var width: float):
-	_viewport.mark(color, from, to)
+	_viewport.mark(from, to, color, width / _image_scale)
 
 
 # Erase an area of the white-board
 func erase(var from: Vector2, var to: Vector2, var width: float):
-	_viewport.erase(_initial_color, from, to)
+	_viewport.erase(from, to, _initial_color, width / _image_scale)
 
 
 # Convert world-coordinates to image coordinates
