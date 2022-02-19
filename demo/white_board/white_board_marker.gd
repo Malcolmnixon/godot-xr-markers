@@ -3,7 +3,7 @@ extends XRToolsPickable
 
 
 ## Marker draw-radius
-export var draw_radius := 0.005
+export var draw_radius := 0.003
 
 ## Marker tip color
 export var tip_color : Color = Color.red

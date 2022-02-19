@@ -1,0 +1,27 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_disabled;
+
+// Inner radius for blending
+uniform float inner_radius : hint_range(0.0, 0.5, 0.01) = 0.45;
+
+void fragment() {
+	// Calculate the distance from the middle of the paint UV
+	float dist = distance(
+		UV, 									// Draw UV position
+		vec2(0.5, 0.5));						// Middle position
+
+	// Calculate mixing coefficient
+	float m = smoothstep(
+		inner_radius, 							// Inner radius
+		0.5, 									// Outer radius
+		dist);									// UV radius
+
+	// Mix the input and erase based on the coefficient
+	COLOR = mix(
+		texture(SCREEN_TEXTURE, SCREEN_UV), 	// Screen color
+		COLOR, 									// New color
+		1.0 - m);								// Coefficient
+}"
