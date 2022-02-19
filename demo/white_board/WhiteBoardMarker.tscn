@@ -48,3 +48,4 @@ material/0 = null
 [node name="TipRayCast" type="RayCast" parent="."]
 transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0302684, 0, 0 )
 cast_to = Vector3( 0, -0.04, 0 )
+collision_mask = 32768

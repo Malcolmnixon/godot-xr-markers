@@ -28,7 +28,8 @@ func clear(var color: Color):
 	_line.visible = false
 	_erase.visible = false
 
-	# Trigger rendering
+	# Trigger clear and rendering
+	render_target_clear_mode = Viewport.CLEAR_MODE_ONLY_NEXT_FRAME
 	render_target_update_mode = Viewport.UPDATE_ONCE
 
 

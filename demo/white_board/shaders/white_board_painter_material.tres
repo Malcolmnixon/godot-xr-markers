@@ -1,8 +1,0 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
-
-[ext_resource path="res://demo/white_board/shaders/white_board_painter.tres" type="Shader" id=1]
-
-[resource]
-resource_local_to_scene = true
-shader = ExtResource( 1 )
-shader_param/inner_radius = 0.45

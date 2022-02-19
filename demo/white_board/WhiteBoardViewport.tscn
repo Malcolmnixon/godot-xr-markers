@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://demo/white_board/shaders/white_board_painter_material.tres" type="Material" id=1]
+[ext_resource path="res://demo/white_board/shaders/white_board_blob.tres" type="Shader" id=1]
 [ext_resource path="res://demo/white_board/white_board_viewport.gd" type="Script" id=2]
+[ext_resource path="res://demo/white_board/shaders/white_board_clear.tres" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 1 )
+shader_param/inner_radius = 0.45
 
 [node name="WhiteBoardViewport" type="Viewport"]
 size = Vector2( 1024, 1024 )
@@ -12,12 +20,14 @@ script = ExtResource( 2 )
 
 [node name="Clear" type="ColorRect" parent="."]
 visible = false
+material = SubResource( 1 )
+use_parent_material = true
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Erase" type="ColorRect" parent="."]
 visible = false
-material = ExtResource( 1 )
+material = SubResource( 2 )
 margin_right = 1000.0
 margin_bottom = 1000.0
 
