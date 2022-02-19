@@ -2,20 +2,20 @@ class_name WhiteBoardMarker
 extends XRToolsPickable
 
 
+## Marker draw-radius
+export var draw_radius := 0.005
+
 ## Marker tip color
 export var tip_color : Color = Color.red
 
-# Is the marker being dragged
-var _is_drag := false
 
-# Last marker point
+# Private fields
+var _is_drag := false
 var _last_point := Vector2.ZERO
 
-# Marker tip mesh
-onready var _tip_mesh : MeshInstance = $TipMesh
-
-# Marker tip ray-cast
-onready var _tip_ray_cast : RayCast = $TipRayCast
+# Node references
+onready var _tip_mesh :MeshInstance = $TipMesh
+onready var _tip_ray_cast :RayCast = $TipRayCast
 
 
 func _ready():
@@ -43,7 +43,7 @@ func _process(var _delta: float):
 
 	# If dragging, mark the white-board
 	if _is_drag:
-		white_board.mark(tip_color, _last_point, image_point)
+		white_board.mark(_last_point, image_point, tip_color, draw_radius)
 
 	# Update the marker data
 	_is_drag = true
